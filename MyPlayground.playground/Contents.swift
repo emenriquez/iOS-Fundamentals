@@ -1,17 +1,29 @@
-struct Town {
-    let name = "Erikland"
-    var citizens = [
-        "Erik",
-        "Caspi",
-        "Pumpkin"
-    ]
-    var resources = [
-        "Grain": 100,
-        "Ore": 42,
-        "Wool": 75
-    ]
+
+
+
+class Assignment {
+    
+    
+    func fibonacci(n: Int) {
+        
+        var base = [0, 1]
+        if n < 3 {
+            print(Array(base[0..<n]))
+        } else {
+            for number in 3...n {
+                base.append(base[number-2]+base[number-3])
+            }
+            print(base)
+        }
+    }
+    
+    
 }
 
-var myTown = Town()
+let assignment = Assignment()
 
-print(myTown.name)
+assignment.fibonacci(n: 1)
+
+print("next")
+
+assignment.fibonacci(n: 10)
